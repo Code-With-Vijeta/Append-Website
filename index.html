@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Append</title>
+  </head>
+
+  <body>
+    <nav
+      class="navbar N_av navbar-expand-lg rounded me-0"
+      aria-label="Thirteenth navbar example"
+    >
+      <div class="container-fluid px-0">
+        <a class="append navbar-brand app-end" href="#">Append.</a>
+        <div
+          class="collapse navbar-collapse d-lg-flex justify-content-lg-center"
+          id="navbarsExample11"
+        >
+          <ul class="navbar-nav col-lg-6 justify-content-evenly">
+            <li class="nav-item">
+              <a
+                class="nav-link active home"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-Items" href="./index.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-Items" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-Items" href="./team.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-Items" href="./team.html">Team</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle nav-Items"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Dropdown</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./index.html">Action</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- login successful -->
+        <div class="hidden loginSuccessful">
+          <div
+            id="card"
+            class="animated successfulLogin"
+            style="translate: -50"
+          >
+            <div id="upper-side">
+              <?xml version="1.0" encoding="utf-8"?>
+              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+              <svg
+                version="1.1"
+                id="checkmark"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                xml:space="preserve"
+              >
+                <path
+                  d="M131.583,92.152l-0.026-0.041c-0.713-1.118-2.197-1.447-3.316-0.734l-31.782,20.257l-4.74-12.65 c-0.483-1.29-1.882-1.958-3.124-1.493l-0.045,0.017c-1.242,0.465-1.857,1.888-1.374,3.178l5.763,15.382 c0.131,0.351,0.334,0.65,0.579,0.898c0.028,0.029,0.06,0.052,0.089,0.08c0.08,0.073,0.159,0.147,0.246,0.209 c0.071,0.051,0.147,0.091,0.222,0.133c0.058,0.033,0.115,0.069,0.175,0.097c0.081,0.037,0.165,0.063,0.249,0.091 c0.065,0.022,0.128,0.047,0.195,0.063c0.079,0.019,0.159,0.026,0.239,0.037c0.074,0.01,0.147,0.024,0.221,0.027 c0.097,0.004,0.194-0.006,0.292-0.014c0.055-0.005,0.109-0.003,0.163-0.012c0.323-0.048,0.641-0.16,0.933-0.346l34.305-21.865 C131.967,94.755,132.296,93.271,131.583,92.152z"
+                />
+                <circle
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-width="5"
+                  stroke-miterlimit="10"
+                  cx="109.486"
+                  cy="104.353"
+                  r="32.53"
+                />
+              </svg>
+              <h3 id="status">Success</h3>
+            </div>
+            <div id="lower-side">
+              <p id="message">
+                Congratulations, your account has been successfully created.
+              </p>
+              <a href="#" id="contBtn">Continue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- login not successful -->
+        <div class="hidden loginNotSuccessful" >
+          <div id="card" class="animated successfulNotLogin">
+            <div id="upperSide" style="background-color: rgb(230 14 14)">
+              <?xml version="1.0" encoding="utf-8"?>
+              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+              <img
+                src="./images/cross.png"
+                style="height: 100px; width: 130px"
+                alt="#"
+              />
+              <h3 id="Status">Not successful</h3>
+            </div>
+            <div id="lower-side">
+              <p id="message">
+                Incorrect username or password. Please try again.
+              </p>
+              <a
+                href="#"
+                id="TryAgainBtn"
+                style="background-color: rgb(230 14 14)"
+                >Try Again</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="d-lg-flex col-lg-3 justify-content-lg-end buttonclass">
+          <button
+            class="login-button btn"
+            style="position: relative; background-color: #dc3545; color: white"
+          >
+            Login
+          </button>
+
+          <!-- form -->
+          <div class="formBody hidden">
+            <div class="center">
+              <h1 class="blue-mark">Login</h1>
+              <button class="close_modal">&times;</button>
+              <form action="#">
+                <div class="input-field">
+                  <input class="emailReq" type="text" required />
+                  <label>Enter your email</label>
+                </div>
+                <div class="input-field">
+                  <input class="passReq" type="password" required />
+                  <label>Enter your password</label>
+                </div>
+                <div class="forget">
+                  <label for="remember">
+                    <input type="checkbox" id="remember" />
+                    <p class="remember-me">Remember me</p>
+                  </label>
+                  <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="logIn">Log In</button>
+                <div class="register">
+                  <p>Don't have an account? <a href="#">Register</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <button
+            class="navbar-toggler tog-gle"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarsExample11"
+            aria-controls="navbarsExample5"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon tog-gle_icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+    </nav>
+    <div class="Img container-fluid">
+      <img
+        class="img"
+        src="./images/main.jpg"
+        alt="image"
+      />
+    </div>
+
+    <!-- sign up -->
+    <div class="container-sm sign_Up">
+      <div class="row">
+        <div class="col-lg-12 ps-5">
+          <h1 class="web-site">Welcome to Our Website</h1>
+          <p class="designer">
+            We are team of talented designers making websites with Bootstrap
+          </p>
+          <form
+            action="#"
+            class="sign-up-form d-flex aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter email address"
+            />
+            <input type="submit" class="btn btn-primary" value="Sign up" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- logo -->
+    <div class="container py-5">
+      <div class="row justify-content-between">
+        <div class="col-sm mb-4">
+          <img
+            class="lo-go"
+            src="https://bootstrapmade.com/demo/templates/Append/assets/img/clients/client-1.png"
+            alt="myob"
+          />
+        </div>
+        <div class="col-sm mb-4">
+          <img
+            class="lo-go"
+            src="https://bootstrapmade.com/demo/templates/Append/assets/img/clients/client-2.png"
+            alt="belimo"
+          />
+        </div>
+        <div class="col-sm mb-4">
+          <img
+            class="lo-go"
+            src="https://bootstrapmade.com/demo/templates/Append/assets/img/clients/client-4.png"
+            alt="grabyo"
+          />
+        </div>
+        <div class="col-sm mb-4">
+          <img
+            class="lo-go"
+            src="https://bootstrapmade.com/demo/templates/Append/assets/img/clients/client-3.png"
+            alt="lifegroups"
+          />
+        </div>
+        <div class="col-sm mb-4">
+          <img
+            class="lo-go"
+            src="https://bootstrapmade.com/demo/templates/Append/assets/img/clients/client-6.png"
+            alt="trustly"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- about us -->
+    <div class="About-Us py-5 me-0">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-md-5 col-12">
+            <button type="button" class="btn btn-outline-danger about-us mb-3">
+              About us
+            </button>
+
+            <h1 class="rerum">Ducimus rerum libero reprehenderit cumque</h1>
+
+            <p class="tempore">
+              Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor
+              cumque alias maxime. Enim reiciendis minus et rerum hic non. Dicta
+              quas cum quia maiores iure. Quidem nulla qui assumenda incidunt
+              voluptatem tempora deleniti soluta.
+            </p>
+
+            <button type="button" class="btn btn-danger read-more">
+              Read More ->
+            </button>
+          </div>
+          <div class="col-md-7 col-12">
+            <div class="container">
+              <div class="row justify-content-center gy-4">
+                <div class="col-md-5 col-6 icon-box eius-provident me-3">
+                  <i class="bi bi-building"></i>
+                  <h3>Eius provident</h3>
+                  <p>
+                    Magni repellendus vel ullam hic officia accusantium ipsa
+                    dolor omnis dolor voluptatem
+                  </p>
+                </div>
+                <div class="col-md-5 col-6 icon-box rerum-aperiam">
+                  <i class="bi bi-clipboard-pulse"></i>
+                  <h3>Rerum aperiam</h3>
+                  <p>
+                    Autem saepe animi et aut aspernatur culpa facere. Rerum
+                    saepe rerum voluptates quia
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="container mt-3">
+              <div class="row justify-content-center gy-4">
+                <div class="col-md-5 col-6 icon-box veniam-omnis me-3">
+                  <i class="bi bi-command"></i>
+                  <h3>Veniam omnis</h3>
+                  <p>
+                    Omnis perferendis molestias culpa sed. Recusandae quas
+                    possimus. Quod consequatur corrupti
+                  </p>
+                </div>
+                <div class="col-md-5 col-6 icon-box delares-sapiente">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <h3>Delares sapiente</h3>
+                  <p>
+                    Sint et dolor voluptas minus possimus nostrum. Reiciendis
+                    commodi eligendi omnis quideme lorenda
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- clients -->
+    <div id="stats" class="stats section me-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="stats-item text-center">
+              <h1 class="purecounter">232</h1>
+              <p>Clients</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="stats-item text-center">
+              <h1 class="purecounter">521</h1>
+              <p>Projects</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="stats-item text-center">
+              <h1 class="purecounter">1453</h1>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="stats-item text-center">
+              <h1 class="purecounter">32</h1>
+              <p>Workers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid me-0">
+      <img
+        src="https://bootstrapmade.com/demo/templates/Append/assets/img/stats-bg.jpg"
+        alt="stats"
+        class="ass-ets"
+      />
+    </div>
+    <!-- team -->
+    <div class="container marketing mt-5">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img
+            class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            src="        https://bootstrapmade.com/demo/templates/Append/assets/img/team/team-4.jpg"
+            alt="#"
+          />
+          <h2 class="fw-normal">Amanda Jepson</h2>
+          <p>
+            Magni voluptatem accusamus assumenda cum nisi aut qui dolorem
+            voluptate sed et veniam quasi quam consectetur
+          </p>
+          <p><a class="btn btn-danger" href="#">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img
+            class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            src="        https://bootstrapmade.com/demo/templates/Append/assets/img/team/team-1.jpg"
+            alt="#"
+          />
+          <h2 class="fw-normal">Walter White</h2>
+          <p>
+            Aliquam iure quaerat voluptatem praesentium possimus unde laudantium
+            vel dolorum distinctio dire flow
+          </p>
+          <p><a class="btn btn-danger" href="#">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img
+            class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            src="https://bootstrapmade.com/demo/templates/Append/assets/img/team/team-6.jpg"
+            alt="#"
+          />
+          <h2 class="fw-normal">Josepha Palas</h2>
+          <p>
+            Sint sint eveniet explicabo amet consequatur nesciunt error enim
+            rerum earum et omnis fugit eligendi cupiditate
+          </p>
+          <p><a class="btn btn-danger" href="#">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- footer -->
+    <div class="container-fluid">
+      <footer class="px-5 py-5 mt-1 bg-dark me-0">
+        <div class="row link-s">
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="service">Useful Links</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >About us</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Terms of service</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Privacy policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="service">Our Services</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Web Design</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Web Development</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Product Management</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Marketing</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Graphic Design</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="service">Contact Us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >A108 Adam Street</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >A108 Adam Street</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >United States</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Phone: +1 5589 55488 55</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary footer-info"
+                  >Email: info@example.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 offset-md-1 mb-3 append-form">
+            <form>
+              <h5 class="app-end">Append.</h5>
+              <p class="nav-link footer-info">
+                Cras fermentum odio eu feugiat lide par naso tierra.
+              </p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn btn-danger" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+        >
+          <p class="service">© 2024 Company, Inc. All rights reserved.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram ms-3"></i></a>
+            <a href="#"><i class="bi bi-linkedin ms-3"></i></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.js"></script>
+    <script src="./append.js"></script>
+  </body>
+</html>
